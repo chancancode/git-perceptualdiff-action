@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - uses: rwjblue/setup-volta@v1
     - run: |
         npm install
         npm run all
@@ -19,5 +20,5 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: ./
-      with: 
+      with:
         milliseconds: 1000
